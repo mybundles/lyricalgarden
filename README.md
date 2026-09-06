@@ -1,1 +1,1 @@
-# lyricalgarden.github.io
+# lyricalgarden.netlify.app
