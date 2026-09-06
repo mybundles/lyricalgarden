@@ -1,0 +1,27 @@
+﻿/* = = = = = = = = = = =
+SHADOWS
+= = = = = = = = = = = */
+
+.lightbox__inner, .modal__inner {
+  -webkit-box-shadow: var(--shdw-color-xl) var(--shdw-xl);
+                     box-shadow: var(--shdw-color-xl) var(--shdw-xl);
+}
+.slider__inner, 
+.code.is-block {
+  -moz-box-shadow: var(--shdw-color-lg) var(--shdw-lg);
+               box-shadow: var(--shdw-color-lg) var(--shdw-lg);
+}
+.navlinks .dpdown__dpdown, .icongrp.is-brands .ico {
+  -webkit-box-shadow: var(--shdw-color-md) var(--shdw-md);
+                     box-shadow: var(--shdw-color-md) var(--shdw-md);
+}
+.btn:not(:disabled):not(.multiaction .is-primary), .multiaction {
+  -webkit-box-shadow: var(--shdw-btn) var(--shdw-md);
+                     box-shadow: var(--shdw-btn) var(--shdw-md);
+}
+.loader:before {
+  -webkit-box-shadow: var(--shdw-color-md) 0 0 2rem;
+                     box-shadow: var(--shdw-color-md) 0 0 2rem;
+}
+
+

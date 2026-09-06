@@ -1,0 +1,54 @@
+/* = = = = = = = = = = =
+HERO
+All Selectors:
+.hero
+.hero.is-full
+.hero.is-cntr
+.hero__inner
+.hero__display
+= = = = = = = = = = = */
+
+.hero, .hero__inner {
+  display: grid;
+  align-content: center;
+  row-gap: var(--hero-gap);
+}
+.hero {
+  flex-shrink: 0;
+  position: relative;
+  width: 100%;
+  padding: var(--hero-padding);
+}
+.hero.is-full { min-height: 100vh; }
+.topbar + .hero.is-full:not(.videobg) { min-height: var(--hero-min-height); }
+
+  .hero__inner {
+    max-width: var(--hero-max-width);
+    width: 100%;
+  }
+    .hero__display {
+      text-transform: var(--hero-text-transform);
+      line-height: var(--hero-line-height);
+      font-family: var(--hero-font-family);
+      font-weight: var(--hero-font-weight);
+      font-size: var(--hero-font-size);
+    }
+
+/* centered */
+.hero.is-cntr {
+  -webkit-justify-content: center;
+                     justify-content: center;
+  text-align: center;
+}
+  .is-cntr .hero__inner {
+    max-width: var(--hero-max-width);
+    width: 100%;
+    margin: auto;
+    -webkit-justify-content: center;
+                       justify-content: center;
+    -webkit-justify-items: center;
+                       justify-items: center;
+  }
+
+
+

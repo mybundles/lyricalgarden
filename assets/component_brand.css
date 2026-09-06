@@ -1,0 +1,35 @@
+/* = = = = = = = = = = =
+BRAND
+All Selectors:
+.brand
+.brand__logo
+= = = = = = = = = = = */
+
+.brand {
+  display: inline-grid;
+  grid-auto-flow: var(--brand-grid-auto-flow);
+  gap: var(--brand-gap);
+  align-items: center;
+  height: var(--brand-height);
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-inline: var(--brand-margin-x);
+  padding-inline: var(--brand-padding-x);
+  text-transform: var(--brand-text-transform);
+  line-height: var(--brand-line-height);
+  font-family: var(--brand-font-family);
+  font-weight: var(--brand-font-weight);
+  font-size: var(--brand-font-size);
+}
+  .brand__logo {
+    display: block;
+    height: var(--brand-height);
+    width: auto;
+    margin-inline: var(--brand-margin-x);
+    -webkit-object-fit: contain;
+                       object-fit: contain;
+  }
+
+
+
+

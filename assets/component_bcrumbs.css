@@ -1,0 +1,35 @@
+/* = = = = = = = = = = =
+BREADCRUMBS
+All Selectors:
+.bcrumbs
+.bcrumbs__itm
+.bcrumbs__itm.is-1st
+.bcrumbs [aria-current="page"]
+.bcrumbs__itm:before
+= = = = = = = = = = = */
+
+.bcrumbs, .bcrumbs__itm {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  gap: var(--bcrumbs-gap);
+}
+.bcrumbs, .bcrumbs__itm:before { font-size: var(--bcrumbs-font-size); }
+.bcrumbs {
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: -moz-fit-content;
+  width:              fit-content;
+}
+  .bcrumbs__itm { text-transform: var(--bcrumbs-text-transform); }
+  .bcrumbs [aria-current="page"] {
+    cursor: default;
+    pointer-events: none;
+  }
+    .bcrumbs__itm:before {
+      content: var(--bcrumbs-content);
+      font-family: var(--bcrumbs-font-family);
+    }
+
+
+

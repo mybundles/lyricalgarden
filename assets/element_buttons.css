@@ -1,0 +1,48 @@
+/* = = = = = = = = = = =
+GUM BUTTONS
+All Selectors:
+.btn
+.btn:disabled
+.is-cta, .is-primary, .is-mini, .is-outline, .is-success, .is-warning, .is-danger
+.multiaction
+= = = = = = = = = = = */
+
+/*** Btn ***/
+.btn {
+  min-height: var(--btn-min-height);
+  margin-inline: var(--btn-margin-x);
+  padding-inline: var(--btn-padding-x);
+  padding-block: var(--btn-padding-y);
+  text-transform: var(--btn-text-transform);
+  line-height: var(--btn-line-height);
+  font-size: var(--btn-font-size);
+}
+
+
+/*** Outline Button ***/
+.btn.is-outline { outline: var(--btn-outline-width) solid; }
+
+
+/*** Multi-action ***/
+.multiaction {
+  width: -moz-fit-content;
+  width:              fit-content;
+  display: -webkit-flex;
+  display: flex;
+  column-gap: var(--multiaction-gap);
+  align-content: center;
+}
+  .multiaction .btn:first-child { text-align: right; }
+
+
+/*** Form Buttons ***/
+.btn.is-success { cursor: default; }
+.btn:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+
+
+
+

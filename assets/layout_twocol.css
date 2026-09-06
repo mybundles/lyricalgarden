@@ -1,0 +1,31 @@
+/* = = = = = = = = = = =
+Two-Column Layout
+All Selectors:
+.has-left-sidebar, .has-right-sidebar
+= = = = = = = = = = = */
+
+/* mobile view */
+@media screen and (max-width: 61.9rem) {
+  .sidebar__header { display: none; }
+}
+
+/* tablet | desktop */
+@media screen and (min-width: 62rem) /* 992px */ {
+  /*layout*/.has-left-sidebar { padding-left: var(--layout-padding); }
+  /*layout*/.has-right-sidebar { padding-right: var(--layout-padding); }
+    .sidebar {
+      bottom: unset;
+      -webkit-box-shadow: none;
+                         box-shadow: none;
+    }
+    .sidebar[aria-hidden="true"] {
+      visibility: unset;
+      -webkit-transform: unset;
+                         transform: unset;
+    }
+      .sidebar .is-closebtn, .sidebar__title,
+      .topbar .brand:not(.navlinks .brand), .is-menubtn { display: none; }
+}
+
+
+

@@ -1,0 +1,54 @@
+﻿
+/* = = = = = = = = = = =
+GLOBAL TYPOGRAPHY
+= = = = = = = = = = = */
+
+html {
+  font-size: var(--html-fs);
+  /* to prevent font size browser inconsistencies | font-size inflation */
+  -webkit-text-size-adjust: none; /*Safari*/
+                    text-size-adjust: none;
+}
+body {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-justify: distribute; /* Limited browser support */
+  -webkit-hyphens: auto; /* For Webkit browsers (Chrome, Safari) */
+        -moz-hyphens: auto;
+           -ms-hyphens: auto;
+                     hyphens: auto;
+  line-height: var(--body-line-height);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+}
+h1, h2, h3, h4, h5, h6 {
+  line-height: var(--heading-line-height);
+  font-size: var(--heading-font-size);
+}
+.fs-bgr {
+  line-height: var(--bgr-line-height);
+  font-size: var(--bgr-font-size);
+}
+.fs-smlr {
+  line-height: var(--smlr-line-height);
+  font-size: var(--smlr-font-size);
+}
+.fs-sm, small {
+  line-height: var(--sm-line-height);
+  font-size: var(--sm-font-size);
+}
+
+.sup, .sub {
+  position: relative;
+  line-height: 0;
+  vertical-align: baseline;
+  font-size: var(--script-font-size);
+}
+.sup { top: var(--script-inset); }
+.sub { bottom: var(--script-inset); }
+
+
+
+
+
+

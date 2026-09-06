@@ -1,0 +1,46 @@
+/* = = = = = = = = = = =
+BACKGROUNDS
+All Selectors:
+.imgbg
+.imgbg:before
+.videobg
+= = = = = = = = = = = */
+
+/*** imgbg ***/
+.imgbg {
+  position: relative; 
+  z-index: 0;
+}
+.imgbg:before {
+  content: "";
+  position: absolute;
+}
+.topbar + .imgbg:before { top: var(--imgbg-inset); }
+
+
+
+/*** videobg ***/
+.layout {
+  /*deals with the levelling of video bg*/
+  position: relative;
+  z-index: 0;
+}
+.videobg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  -moz-object-fit: cover;
+               object-fit: cover;
+  pointer-events: none;
+  opacity: var(--videobg-opacity);
+}
+
+
+/*** Combined ***/
+.imgbg:before, .videobg {
+  top: 0; right: 0; bottom: 0; left: 0; inset: 0;
+  z-index: -1;
+}
+
+
+

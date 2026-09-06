@@ -1,0 +1,91 @@
+﻿
+/* = = = = = = = = = = =
+MIXED
+= = = = = = = = = = = */
+
+/* ### PRIMITIVE TOKENS ### */
+
+:root {
+  /*** Timing ***/
+  --tm-pt-2: .2s;
+  --tm-pt-3: .3s;
+  --tm-pt-4: .4s;
+  --tm-pt-5: .5s;
+
+
+  /*** Blur ***/
+  --blr: 6px;
+
+
+  /*** Opacity ***/
+  --op-1: .1;
+  --op-2: .2;
+  --op-3: .3;
+  --op-4: .4;
+  --op-5: .5;
+  --op-6: .6;
+  --op-8: .8;
+  --op-9: .9;
+}
+
+
+
+
+/* ### SEMANTIC TOKENS ### */
+:root {
+  /*** Easing ***/
+  --easing-faster: var(--tm-pt-2);
+  --easing-fast: var(--tm-pt-3);
+  --easing-slow: var(--tm-pt-4);
+  --easing-slower: var(--tm-pt-5);
+}
+
+
+
+
+/* ### COMPONENT TOKENS ### */
+
+/*** MAINBAR SECTIONS ***/
+.has-left-sidebar, .has-right-sidebar { --layout-transition-duration: .3s; }
+
+
+/*** BULLETS ***/
+.is-spinner .bul__itm:before { --spinner-transition-duration: var(--easing-fast); }
+
+
+/*** PAGINATION ***/
+.pagination__itm[disabled], .pagination__itm[aria-disabled="true"] { --pagination-opacity: var(--opcty); }
+
+
+/*** CARDS ***/
+.post__img { --card-opacity: var(--op-2); }
+
+
+/*** DIALOGS ***/
+.lightbox__wrapper { --dialog-opacity: 0; }
+.lightbox__inner:hover .lightbox__wrapper { --dialog-opacity: 1; }
+.loader:before { --dialog-timing-duration: var(--easing-slower); }
+
+
+/*** VIDEOBG ***/
+.videobg { --videobg-opacity: var(--op-5); }
+
+
+/*** BGSCROLL ***/
+.bgscroll { --bgscroll-timing-duration: 50s; }
+
+
+/*** FUNCTION BUTTONS ***/
+.sidebar .is-closebtn { --function-opacity: var(--op-2); }
+.sidebar:hover .is-closebtn { --function-opacity: 1; }
+.is-last .is-jump { --function-opacity: 0; }
+.is-last:hover .is-jump { --function-opacity: .2; }
+.is-last:hover .is-jump:active { --function-opacity: 1; }
+
+
+/*** NOTEPAD ***/
+.note:hover .is-jump { --jump-opacity: .5; }
+
+
+
+

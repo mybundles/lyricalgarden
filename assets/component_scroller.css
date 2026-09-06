@@ -1,0 +1,26 @@
+﻿/* = = = = = = = = = = =
+SCROLLER
+All Selectors:
+.scroller
+.scroller__inner
+.scroller__itm
+= = = = = = = = = = = */
+
+.scroller {
+  overflow-x: scroll;
+  height: var(--scroller-height);
+}
+  .scroller__inner {
+    height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    column-gap: var(--scroller-gap);
+  }
+    .scroller__itm {
+      height: 100%;
+      width: auto;
+      -webkit-box-shadow: none;
+                         box-shadow: none;
+    }

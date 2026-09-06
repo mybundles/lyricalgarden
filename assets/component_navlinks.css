@@ -1,0 +1,33 @@
+
+/* = = = = = = = = = = =
+NAVLINKS
+All Selectors:
+.navlinks
+.navlinks__itm
+.navlinks.is-collapsible
+= = = = = = = = = = = */
+
+/*** Inline ***/
+.navlinks {
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: wrap;
+  gap: var(--navlinks-gap);
+  -webkit-justify-content: var(--navlinks-justify-content);
+                     justify-content: var(--navlinks-justify-content);
+  line-height: var(--navlinks-line-height);
+}
+  .navlinks__itm {
+    display: grid;
+    align-content: center;
+    padding-inline: var(--navlinks-padding-x);
+  }
+
+
+/*** Collapsible Variant ***/
+@media screen and (max-width: 62rem) { /*bypass in site theme*/
+  .is-collapsible { display: none; }
+}
+
+
+

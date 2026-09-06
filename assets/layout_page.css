@@ -1,0 +1,197 @@
+/* = = = = = = = = = = =
+MAIN PAGE LAYOUT
+All Selectors:
+.layout
+.sidebar, .sidebar.is-left, .sidebar.is-right
+.sidebar[aria-hidden="true"], .sidebar[aria-hidden="false"]
+.mainbar
+.topbar, .topbar.is-sticky
+.topbar__inner, .topbar__inner.is-left, .topbar__inner.is-right
+.header
+.main
+.container
+.section, .section-alt
+.box
+.footer
+.footer__copy
+
+.is-sbar-active, .is-lytbox-active, .is-modal-active, .is-loader-active
+
+.hr
+= = = = = = = = = = = */
+
+/*** General ***/
+html, body { height: 100%; }
+body {
+  width: 100%;
+  max-width: var(--body-max-width);
+  min-width: var(--body-min-width);
+  margin-inline: auto;
+  position: relative;
+  overflow: hidden;
+  scrollbar-width: var(--scrollbar-thickness);
+}
+body::-webkit-scrollbar {
+  width: var(--scrollbar-thickness);
+  height: var(--scrollbar-thickness);
+}
+c-layout, c-sidebar { display: block; }
+.container, .header, .section, .section-alt, .box {
+  display: grid;
+  /*align-items: start;*/
+  align-content: start;
+}
+/* utilities */
+.is-outer { row-gap: var(--outer-gap); }
+.is-inner { row-gap: var(--inner-gap); }
+
+
+
+/*** Layout ***/
+/* holds .sidebar and .mainbar, 
+controls layout jumps when scrolling in mobile */
+.layout {
+  height: 100%;
+  width: 100%;
+  overflow-y: hidden;
+}
+
+
+
+/*** Sidebar (default) ***/
+.sidebar {
+  position: fixed;
+  top: 0; bottom: 0; inset-block: 0;
+  width: var(--sidebar-width);
+  height: 100%; /*percent enables scrolling down to the bottom*/
+  height: -webkit-fill-available; /*solution to 100vh scroll problem in mobile */
+  overscroll-behavior: contain; /*prevents content scrolling when scrolling the sidebar, it may prevent the sidebar from lifting & for the content behind from peaking*/
+  touch-action: pan-y; /* prevents the browser from confusing horizontal swipe with vertical scrolling */
+  z-index: var(--sidebar-z-index);
+}
+.sidebar.is-left { left: 0; }
+.sidebar.is-right { right: 0; }
+
+.sidebar[aria-hidden="true"] {
+  visibility: hidden;
+  will-change: transform;
+  -webkit-transform: translateX(-100%);
+                     transform: translateX(-100%);
+}
+.sidebar[aria-hidden="false"] {
+  visibility: visible;
+  -webkit-transform: translateX(0);
+                     transform: translateX(0);
+}
+
+
+
+/*** Mainbar ***/
+/* a must - holds everything except sidebar */
+.mainbar {
+  height: 100%; /*stretches contents in full height*/
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  /* the ff keeps footer at the bottom & stretches
+  ".main" up to the bottom of the viewport even if it's empty*/
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+/*** Topbar ***/
+.topbar, .topbar__inner {
+  display: grid;
+  grid-auto-flow: column;
+}
+.topbar {
+  position: relative;
+  padding-inline: var(--topbar-padding-x);
+  min-height: var(--topbar-min-height);
+  text-transform: var(--topbar-text-transform);
+  line-height: var(--topbar-line-height);
+  font-size: var(--topbar-font-size);
+  z-index: var(--topbar-z-index);
+}
+.topbar.is-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+  .topbar__inner.is-left {
+    justify-items: start;
+    justify-self: start;
+  }
+  .topbar__inner.is-right {
+    justify-items: end;
+    justify-self: end;
+  }
+
+
+
+/*** Main ***/
+/* holds the main content, excludes .hero/.header, .topbar and .footer */
+.main {
+  flex-grow: 1; /*keeps footer at the bottom*/
+  flex-shrink: 0;
+  /*min-height: 100%; option to push footer to the bottom in mobile landscape view when footer grows tall in spite of other restraints*/
+}
+
+
+
+/*** Header ***/
+.header {
+  align-content: center;
+  padding: var(--header-padding);
+}
+
+
+
+/*** Container ***/
+.container { padding: var(--container-padding); }
+
+
+
+/*** Section ***/
+.section, .section-alt { padding: var(--section-padding); }
+
+
+
+/*** Footer ***/
+.footer, .footer__copy {
+  display: grid;
+  align-content: center;
+  min-height: var(--footer-min-height);
+}
+.footer {
+  flex: 0 0 auto;
+  position: relative;
+  text-align: var(--footer-text-align);
+  font-size: var(--footer-font-size);
+}
+  .footer__copy { padding-inline: var(--footer-padding-x); }
+
+
+
+/*** Backdrops ***/
+@media screen and (max-width: 62rem) { .is-sbar-active { overflow-y: hidden; } }
+.is-lytbox-active, .is-modal-active, .is-loader-active,
+.is-lytbox-active .mainbar, .is-modal-active .mainbar, .is-loader-active .mainbar {
+  overflow-y: hidden;
+}
+.mainbar:has(.dialog[open]) { overflow-y: hidden; }
+
+
+
+/*** Separator ***/
+.hr {
+  display: block;
+  border: none;
+  outline: var(--hr-outline);
+  margin: 0;
+}
+
+
+

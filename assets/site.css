@@ -1,0 +1,140 @@
+﻿
+/* = = = = = = = = = = =
+SITE - LYRICAL GARDEN
+= = = = = = = = = = = */
+
+/*** TYPOGRAPHY ***/
+@font-face {
+  font-family: 'Google Sans';
+  src: url('GoogleSans-VariableFont_GRAD,opsz,wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-size-adjust: none;
+}
+@font-face {
+  font-family: 'Sacramento Regular';
+  src: url('Sacramento-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-size-adjust: none;
+}
+
+
+
+/*** SPRITE ICONS ***/
+.is-xs.i-facebook, .is-sm.i-facebook, .is-md.i-facebook, .is-lg.i-facebook, .is-xl.i-facebook { background-position: 0 0; }
+.is-xs.i-pinterest { background-position: 0 4rem; }
+.is-sm.i-pinterest { background-position: 0 5rem; }
+.is-md.i-pinterest { background-position: 0 6rem; }
+.is-lg.i-pinterest { background-position: 0 8rem; }
+.is-xl.i-pinterest { background-position: 0 10rem; }
+.is-xs.i-spotify { background-position: 0 1rem; }
+.is-sm.i-spotify { background-position: 0 1.25rem; }
+.is-md.i-spotify { background-position: 0 1.5rem; }
+.is-lg.i-spotify { background-position: 0 2rem; }
+.is-xl.i-spotify { background-position: 0 2.5rem; }
+menu.icongrp { margin-left: auto; }
+.is-brands .ico {
+  -moz-border-radius: 50%;
+               border-radius: 50%;
+}
+
+
+
+/*** BUTTONS ***/
+.topbar .is-menubtn { margin-right: calc(var(--function-padding-x) * -1); }
+@media screen and (min-width: 62rem) {
+  .has-left-sidebar .is-audiobtn { margin-right: calc(var(--function-padding-x) * -1); }
+}
+
+
+
+/*** BRAND ***/
+.topbar .brand { margin-left: calc(var(--brand-padding-x) * -1); }
+
+
+
+/*** SPLASH ***/
+.splash:before {
+  background: #fff url("colrizeboks-flowers-7910753_640.png") 50% 50% / cover repeat fixed;
+  -webkit-filter: contrast(0.5);
+                     filter: contrast(0.5);
+  /*
+  background: #fff url("Sophie_Anderson_The_song_of_the_lark.webp") 0% 100% / cover no-repeat fixed;
+  -webkit-filter: contrast(0.4);
+                     filter: contrast(0.4);*/
+}
+
+
+
+/*** IMGBG ***/
+.imgbg:before {
+  /*background: #fff6e1 url("no-longer-here-floral-2880622_640.jpg") 50% 50% / 35rem repeat fixed;
+  -webkit-filter: contrast(0.6);
+                     filter: contrast(0.6);*/
+  background: #fff url("colrizeboks-flowers-7910753_640.png") 50% 50% / 30rem repeat fixed;
+  -webkit-filter: contrast(0.5);
+                     filter: contrast(0.5);
+}
+
+
+
+/*** BGSCROLL ***/
+.bgscroll__slides:before, .bgscroll__slides:after {
+  background: url('house-7497001_1280.svg') 0% 100% / cover no-repeat;
+}
+
+
+
+/*** BACKDROP ***/
+.is-loader-active, .is-modal-active, .is-lytbox-active, .topbar {
+  -webkit-filter: contrast(0.4) brightness(1.3);
+                     filter: contrast(0.4) brightness(1.3);
+}
+.lightbox::backdrop, .loader {
+  -webkit-backdrop-filter: blur(1.9px);
+                     backdrop-filter: blur(1.9px);
+}
+@media screen and (max-width: 62rem) {
+  .is-sbar-active {
+    -webkit-filter: contrast(0.4) brightness(1.3);
+                       filter: contrast(0.4) brightness(1.3);
+  }
+}
+
+
+
+/*** CARDS ***/
+.profile__avatar:after {
+  background: url('phuonglucky-frame-6790657_640_edited.png') 0% 0% / contain no-repeat;
+  top: -0.7rem;
+  right: -0.7rem;
+  left: -0.4rem;
+}
+.post {
+  background-color: lavender;
+  background-color: lightcyan;
+  background-color: lightyellow;
+  background-color: seashell;
+  background-color: papayawhip;
+  background-color: oldlace;
+  background-color: palegoldenrod;
+  background-color: lightgoldenrodyellow;
+  background-color: cornsilk;
+  background-color: lemonchiffon;
+  background-color: linen;
+  background-color: lightyellow;
+  background-color: floralwhite;
+  background-color: mistyrose;
+  background-color: lavenderblush;
+  background-color: mintcream;
+  background-color: azure;
+  background-color: honeydew;
+}
+
+
+
+
+
+
+

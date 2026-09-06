@@ -1,0 +1,105 @@
+/* = = = = = = = = = = =
+CARDS
+All Selectors:
+.card
+.bq, .info, .media, .post, .profile, .floated
+.floated.is-left, .floated.is-right
+.info__inner
+.media__img, .post__img
+.media__cap, .post__cap, .profile__cap
+.profile__avatar
+.profile__avatar:after
+.media__title, .profile__title, .info__title
+.post__img
+.bq:before, .bq:after
+.is-wide
+= = = = = = = = = = = */
+
+/*** Mixed ***/
+.card /*, .card-bq, .card-info, .card-media, .card-post, .card-profile*/ {
+  display: grid;
+  align-content: center;
+  text-align: var(--card-text-align);
+  overflow: hidden;
+  width: 100%;
+  max-width: var(--card-max-width);
+  margin-inline: var(--card-margin-x);
+  line-height: var(--card-line-height);
+}
+.card, 
+  .info__inner, 
+  .media__cap, .post__cap, .profile__cap
+  /*, .bq, .info, .profile*/ { row-gap: var(--card-gap); }
+  .media__img, .post__img {
+    -moz-object-fit: cover;
+                 object-fit: cover;
+  }
+  .info__inner, 
+  .media__cap, .post__cap, .profile__cap {
+    display: grid;
+  }
+  .post__img, .profile__avatar:after {
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0; inset: 0;
+  }
+  .card, .media__cap, .post__cap { padding: var(--card-padding); }
+  .bq, .bq:before, .bq:after, 
+  .media__cap, .post__cap, .profile__cap,
+    .media__title, .profile__title, .info__title {
+      line-height: var(--card-line-height);
+      font-size: var(--card-font-size);
+    }
+    .profile__avatar { margin-top: var(--card-margin); }
+    .card .btn { margin-bottom: var(--card-margin); }
+
+
+/*** Profile Card ***/
+  .profile__avatar {
+    position: relative;
+    height: var(--card-height);
+    margin-inline: auto;
+  }
+    .profile__avatar:after { content: ""; }
+    .profile__avatar img {
+      height: 100%;
+      -moz-object-fit: contain;
+                   object-fit: contain;
+    }
+
+
+/*** Floated Card ***/
+.floated {
+  height: var(--card-height);
+  width: auto;
+  margin: var(--card-margin);
+  -moz-object-fit: contain;
+               object-fit: contain;
+}
+.floated.is-left { float: left; }
+.floated.is-right { float: right; }
+
+
+/*** Blockquote Card ***/
+.bq { font-weight: var(--card-font-weight); }
+  .bq:before, .bq:after {
+    content: var(--card-content);
+    text-align: var(--card-text-align);
+    font-family: var(--card-font-family);
+  }
+
+
+/*** Post Card ***/
+.post { position: relative; }
+  .post__img {
+    height: 100%;
+    opacity: var(--card-opacity);
+  }
+  .post__cap {
+    background: none;
+    position: relative;
+    margin-top: var(--card-margin);
+    z-index: 1;
+  }
+
+.is-wide { max-width: var(--card-max-width); }
+

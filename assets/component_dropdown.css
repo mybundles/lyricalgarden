@@ -1,0 +1,50 @@
+/* = = = = = = = = = = =
+DROPDOWN
+All Selectors:
+.dpdown
+.dpdown__trigr
+.dpdown__dpdown
+[aria-expanded="true"] + .dpdown__dpdown
+.dpdown__dpdown li
+= = = = = = = = = = = */
+
+.dpdown { position: relative; }
+
+  .dpdown__trigr {
+    width: 100%;
+    line-height: inherit;
+    font-size: inherit;
+    text-align: inherit;
+  }
+  .navlinks .dpdown__trigr {
+    text-align: center;
+    -webkit-justify-content: center;
+                       justify-content: center;
+  }
+
+  .dpdown__dpdown {
+    max-height: 0; /* to collapse list block paddings (optional if there's no block paddings), required for JS scrollheight dropdown*/
+    overflow: hidden;
+    pointer-events: none;
+    line-height: var(--dpdown-line-height);
+    font-size: var(--dpdown-font-size);
+  }
+  .navlinks .dpdown__dpdown {
+    width: -moz-max-content;
+    width:              max-content;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    z-index: 1;
+    -webkit-transform: translateX(-50%);
+                       transform: translateX(-50%);
+  }
+  /* expanded */
+  [aria-expanded="true"] + .dpdown__dpdown {
+    /*for smooth closing slide of grid dropdown in mobile*/
+    max-height: 100vh;
+  }
+    .dpdown__dpdown li { padding-inline: var(--dpdown-padding-x); }
+
+
+

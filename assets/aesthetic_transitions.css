@@ -1,0 +1,98 @@
+﻿/* = = = = = = = = = = =
+TRANSITIONS
+= = = = = = = = = = = */
+
+.splash {
+  -webkit-transition: opacity .2s, visibility .2s;
+                     transition: opacity .2s, visibility .2s;
+}
+a,
+.bcrumbs__itm {
+  -webkit-transition: color .2s;
+                     transition: color .2s;
+}
+.loader {
+  -webkit-transition: visibility .2s ease-out;
+                     transition: visibility .2s ease-out;
+}
+.loader:before {
+  -webkit-transition: animation-play-state .2s ease-out;
+                     transition: animation-play-state .2s ease-out;
+}
+.sidebar {
+  -webkit-transition: transform .2s, visibility .2s;
+                     transition: transform .2s, visibility .2s;
+}
+@media screen and (min-width: 62.01rem) /* 992px */ {
+  .has-left-sidebar, .has-right-sidebar {
+    -webkit-transition: padding .2s;
+                      transition: padding .2s;
+  }
+  .has-left-sidebar .sidebar, .has-right-sidebar .sidebar {
+    -webkit-transition: unset;
+                      transition: unset;
+  }
+}
+.lightbox__wrapper, .slider__cap, .is-jump {
+  -webkit-transition: opacity .2s;
+                     transition: opacity .2s;
+}
+.js-sbar-backdrop, .js-dialog-backdrop {
+  -webkit-transition: filter .2s ease-in-out;
+                     transition: filter .2s ease-in-out;
+}
+.sidebar__body li, 
+.topbar.is-sticky, 
+.is-closebtn, 
+.form__input, .slider__nav, .tabs__tab {
+  -webkit-transition: background .3s ease-in-out;
+                     transition: background .3s ease-in-out;
+}
+button, .btn, 
+.pagination__itm {
+  -webkit-transition: color .2s, background .2s;
+                     transition: color .2s, background .2s;
+}
+.is-menubtn[aria-pressed="true"]:before {
+  -webkit-transition: transform .5s linear;
+                     transition: transform .5s linear;
+}
+.form__file::file-selector-button {
+  -webkit-transition: background .2s;
+                    transition: background .2s;
+}
+.form__file::-webkit-file-upload-button {
+  -webkit-transition: background .2s;
+                     transition: background .2s;
+}
+.form__file::-ms-browse {
+  -webkit-transition: background .2s;
+                     transition: background .2s;
+}
+.audio, .form__txarea {
+  -webkit-transition: min-height .2s;
+                     transition: min-height .2s;
+}
+.lightbox, .modal, .splash, .loader {
+  --dialog-timing-duration: .2s;
+}
+.is-spinner .bul__itm:before, 
+.slider__track, .tabs__panels {
+  -webkit-transition: transform .2s;
+                     transition: transform .2s;
+}
+.navlinks__itm {
+  -webkit-transition: background .2s, border .2s;
+                     transition: background .2s, border .2s;
+}
+.sidebar .is-closebtn {
+  -webkit-transition: background .2s, opacity .2s;
+                     transition: background .2s, opacity .2s;
+}
+.dpdown__dpdown {
+  -webkit-transition: grid-template-rows .2s, max-height .2s;
+                     transition: grid-template-rows .2s, max-height .2s;
+}
+
+
+

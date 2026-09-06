@@ -1,0 +1,58 @@
+﻿
+/* = = = = = = = = = = =
+FUNCTION BUTTONS
+= = = = = = = = = = = */
+
+.function {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto 1fr;
+  align-items: center;
+  gap: var(--function-gap);
+  min-height: var(--function-min-height);
+  min-width: var(--function-min-width);
+  margin-inline: var(--function-margin-x);
+  padding-inline: var(--function-padding-x);
+  padding-block: var(--function-padding-y);
+  text-transform: var(--function-text-transform);
+  line-height: var(--function-line-height);
+  font-size: var(--function-font-size);
+  opacity: var(--function-opacity);
+}
+  .function:before {
+    content: var(--function-content);
+    line-height: var(--function-line-height);
+    font-family: var(--function-font-family);
+    font-size: var(--function-font-size);
+    order: var(--function-order);
+  }
+
+
+  .is-menubtn[aria-pressed="true"]:before {
+    transform-origin: center;
+    -webkit-transform: rotate(360deg);
+                       transform: rotate(360deg);
+  }
+  /*@media screen and (max-width: 62rem) {
+    .is-menubtn[aria-pressed="true"] {
+      touch-action: none;
+      pointer-events: none;
+    }
+  }*/
+
+
+.sidebar .is-closebtn, .modal .is-closebtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+
+.is-jump {
+  position: fixed;
+  right: var(--function-right);
+  bottom: var(--function-bottom);
+}
+
+

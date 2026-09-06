@@ -1,0 +1,92 @@
+﻿/* = = = = = = = = = = =
+BORDER-RADIUS
+= = = = = = = = = = = */
+
+.is-brands .ico {
+  -moz-border-radius: 50%;
+               border-radius: 50%;
+}
+
+.modal__inner, 
+.container .header, .container .section, 
+.info, .profile:not(.sidebar .profile) {
+  -moz-border-radius: var(--rad-md);
+               border-radius: var(--rad-md);
+}
+.btn:not(.multiaction .btn), .multiaction, 
+.form__file, .form__input, .form__picker, .form__color, .form__txarea, 
+.slider__inner, .waterfall img, 
+.newspaper__img, .lightbox__inner, 
+.code, 
+.media, .post, .bq, .floated, 
+.navlinks .dpdown__dpdown {
+  -moz-border-radius: var(--rad-sm);
+               border-radius: var(--rad-sm);
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+  -moz-border-radius: var(--rad-sm);
+               border-radius: var(--rad-sm);
+}
+input[type="color"]::-webkit-color-swatch {
+  -moz-border-radius: var(--rad-sm);
+               border-radius: var(--rad-sm);
+}
+input[type="color"]::-moz-color-swatch {
+  -moz-border-radius: var(--rad-sm);
+               border-radius: var(--rad-sm);
+}
+.form__file::file-selector-button {
+  -moz-border-radius: var(--rad-sm);
+               border-radius: var(--rad-sm);
+}
+.form__file::-webkit-file-upload-button {
+  -moz-border-radius: var(--rad-sm);
+               border-radius: var(--rad-sm);
+}
+.form__file::-ms-browse {
+  -moz-border-radius: var(--rad-sm);
+               border-radius: var(--rad-sm);
+}
+
+.tabs__tab:not(.tabs__tab:first-child) {
+  -moz-border-radius: var(--rad-sm) var(--rad-sm) 0 0;
+               border-radius: var(--rad-sm) var(--rad-sm) 0 0;
+}
+.tabs__tab:first-child {
+  -moz-border-radius: 0 var(--rad-sm) 0 0;
+               border-radius: 0 var(--rad-sm) 0 0;
+}
+.loader:before, 
+.pagination__itm {
+  -moz-border-radius: 50%;
+               border-radius: 50%;
+}
+.slider__nav.is-prev {
+  -moz-border-radius: 0 50% 50% 0;
+               border-radius: 0 50% 50% 0;
+}
+.slider__nav.is-next {
+  -moz-border-radius: 50% 0 0 50%;
+               border-radius: 50% 0 0 50%;
+}
+.multiaction .btn:first-child {
+  -moz-border-top-left-radius: var(--rad-sm);
+  -moz-border-bottom-left-radius: var(--rad-sm);
+               border-top-left-radius: var(--rad-sm);
+               border-bottom-left-radius: var(--rad-sm);
+}
+.multiaction .btn:last-child {
+  -moz-border-top-right-radius: var(--rad-sm);
+  -moz-border-bottom-right-radius: var(--rad-sm);
+               border-top-right-radius: var(--rad-sm);
+               border-bottom-right-radius: var(--rad-sm);
+}
+.audio::-webkit-media-controls-enclosure {
+  /* removing the curved edges of the audio element */
+  -moz-border-radius: 0;
+               border-radius: 0;
+}
+
+
+
+

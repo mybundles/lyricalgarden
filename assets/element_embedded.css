@@ -1,0 +1,48 @@
+﻿/* = = = = = = = = = = =
+EMBEDDED
+All Selectors:
+.embed
+
+.audio
+.audio.is-sticky
+.audio[aria-hidden="true"]
+.audio[aria-hidden="false"]
+
+.map
+= = = = = = = = = = = */
+
+
+/*** Embed ***/
+.embed {
+  height: auto;
+  min-height: var(--embed-height);
+  overflow: visible; 
+}
+
+
+/*** Audio ***/
+.audio {
+  display: block;
+  width: 100%;
+  height: var(--audio-height);
+}
+.audio[aria-hidden="true"] {
+  height: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+.audio[aria-hidden="false"] { min-height: var(--audio-min-height); }
+.audio.is-sticky {
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+}
+
+
+/*** Map ***/
+.map {
+  width: 100%;
+  height: var(--map-height);
+}
+
+

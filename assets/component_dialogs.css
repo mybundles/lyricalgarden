@@ -1,0 +1,135 @@
+/* = = = = = = = = = = =
+DIALOGS
+All Selectors:
+.modal, .lightbox
+.modal[open], .lightbox[open]
+.modal__inner, .lightbox__inner
+.modal__inner:hover, .lightbox__inner:hover
+
+.lightbox__img
+.lightbox__wrapper
+.lightbox__cap
+
+.splash
+.splash.is-hidden
+.splash:before
+.splash__display
+
+.loader
+.loader.is-hidden
+.loader:before
+.loader.is-hidden:before
+= = = = = = = = = = = */
+
+/*** General ***/
+.modal, .lightbox, .splash, .loader { z-index: var(--dialog-z-index); }
+.splash, .splash:before, .loader { top: 0; right: 0; bottom: 0; left: 0; inset: 0; }
+.splash, .loader {
+  display: grid;
+  position: fixed;
+}
+.modal, .lightbox, .splash, .splash:before {
+  width: 100%;
+  height: 100%;
+}
+.modal, .lightbox {
+  border: 0;
+  background: none;
+  max-width: 100%;
+  max-height: 100%;
+  padding: var(--dialog-padding);
+  overflow: hidden;
+  will-change: transform;
+  -webkit-transform: scale(0);
+                     transform: scale(0);
+}
+.modal[open], .lightbox[open] {
+  display: grid;
+  -webkit-justify-content: center;
+                     justify-content: center;
+  align-content: center;
+  pointer-events: auto;
+  -webkit-animation: zoomfull var(--dialog-timing-duration) forwards;
+                     animation: zoomfull var(--dialog-timing-duration) forwards;
+}
+  .modal__inner, .lightbox__inner { margin: auto; }
+
+
+
+/*** Modal ***/
+.modal__inner {
+  position: relative;
+  max-width: var(--dialog-max-width);
+  max-height: 100%;
+  overflow: hidden;
+}
+.modal__inner:hover { overflow-y: auto; }
+
+
+
+/*** Lightbox ***/
+.lightbox__inner {
+  width: var(--dialog-width);
+  max-height: 100%; /*warning: changing this to 'height' causes a gap between image and below this container when vertical scrollbar shows up on hover*/
+  overflow: hidden;
+}
+.lightbox__inner:hover { overflow-y: auto; }
+
+  .lightbox__img {
+    -moz-object-fit: contain;
+                 object-fit: contain;
+  }
+
+  .lightbox__wrapper {
+    position: absolute;
+    top: 0; left: 0; right: 0; inset-inline: 0;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+                      justify-content: space-between;
+    align-items: center;
+    opacity: var(--dialog-opacity);
+  }
+
+    .lightbox__cap {
+      min-height: var(--dialog-min-height);
+      padding: var(--dialog-padding);
+      font-size: var(--dialog-font-size);
+    }
+
+
+
+/*** Splash ***/
+.splash.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+  /*bkg image*/
+  .splash:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+  }
+
+
+
+/*** Loader ***/
+.loader { padding: var(--dialog-padding); }
+.loader.is-hidden { visibility: hidden; }
+  .loader:before {
+    content: "";
+    display: block;
+    margin: auto;
+    height: var(--dialog-size);
+    width: var(--dialog-size);
+    -webkit-animation: spin var(--dialog-timing-duration) linear infinite;
+                       animation: spin var(--dialog-timing-duration) linear infinite;
+  }
+  .loader.is-hidden:before {
+    -webkit-animation-play-state: paused;
+                       animation-play-state: paused;
+  }
+
+
+
